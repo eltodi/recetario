@@ -1,0 +1,11 @@
+{% for usuario in usuarios %}
+<li>{{ usuario.username }} - <em>{{ usuario.email }}</em>
+	<ul>
+		{% for item in recetas %}
+			{% if item.usuario == usuario %}
+				<li>{{ item }}</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</li>
+{% endfor %}

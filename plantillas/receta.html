@@ -1,0 +1,18 @@
+<style>
+img{
+	width: 200px;
+}
+</style>
+
+<h1>{{ receta }}</h1>
+<img src="{{MEDIA_URL}}{{receta.imagen}}" />
+<h2>Ingredientes</h2>
+<p>{{ receta.ingredientes }}</p>
+
+<h2>Preparación</h2>
+<p>{{ receta.preparacion }}</p>
+
+<h2>Comentarios</h2>
+{% for comentario in comentarios %}
+	<li><p>{{ comentario.texto }}</p></li>
+{% endfor %}

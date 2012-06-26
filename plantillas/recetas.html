@@ -1,0 +1,15 @@
+<style>
+	img{ 
+		width: 100px;
+	}
+</style>
+<section>
+	<ul>
+	{% for item in recetas %}
+		<li>
+			<a href="/receta/{{ item.id }}">{{ item.titulo }}</a><br>
+			<img src="{{ MEDIA_URL }}{{ item.imagen }}" />
+		</li>
+	{% endfor %}
+	</ul>
+</section>
