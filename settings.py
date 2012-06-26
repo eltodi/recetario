@@ -1,10 +1,14 @@
 # Django settings for recetario project.
 
 #encoding:utf-8 
+import os
+RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
+    ("Elias Torres", "eltodi@gmail.com"),
     # ('Your Name', 'your_email@example.com'),
 )
 
@@ -12,8 +16,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'recetario.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -28,11 +32,11 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Madrid'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ES'
 
 SITE_ID = 1
 
@@ -104,6 +108,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'recetario.urls'
 
 TEMPLATE_DIRS = (
+    os.path.join(RUTA_PROYECTO, "plantillas"),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -116,10 +121,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admin',    
+    'django.contrib.admindocs',
+    'principal',
 )
 
 # A sample logging configuration. The only tangible logging
