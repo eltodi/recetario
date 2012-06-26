@@ -3,10 +3,14 @@
 <head>
 	<style>
 		{% block style_css %}{% endblock %}
+		img{ width: 150px;}
 	</style>
 </head>
 <body>
-<h1>HOLA</h1>
+<header>
+	{% include "menu.html" %}
+</header>
+
 {%block contenido %}{% endblock %}
 </body>
 </html>

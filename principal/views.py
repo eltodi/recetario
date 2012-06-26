@@ -5,8 +5,7 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 
 def sobre(request):
-	html = "<html><body>Hola Mundo</body<</html>";
-	return HttpResponse(html)
+	return render_to_response("acerca_de.html")
 
 def inicio(request):
 	recetas = Receta.objects.all()
