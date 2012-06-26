@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block contenido %}
 <header>
 	<nav>
 		<ul>
@@ -10,10 +12,17 @@
 </header>
 <section>
 	<h1>Recetario</h1>
-	<p>Actualmente tenemos registrados: </p>
-	<ul>
-		{% for dato in datos %}
-		<li>{{ dato.titulo }}</li>
-		{%endfor%}
-	</ul>
+	<p>Actualmente tenemos registradas 
+		{% with total=datos.count %}
+			{{ total }} receta{{total|pluralize}}
+		{% endwith %}
+
+			<ul>
+				{% for dato in datos %}
+					<li>{{ dato.titulo|upper }}</li>
+					{% empty %}
+						<li>No hay recetas disponibles</li>
+				{%endfor%}
+			</ul>
 </section>
+{% endblock %}
