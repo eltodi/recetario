@@ -8,3 +8,10 @@ class ContactoForm(forms.Form):
 	correo = forms.EmailField(label="Tu dirección de correo")
 	mensaje = forms.CharField(widget=forms.Textarea)
 
+class RecetaForm(ModelForm):
+	class Meta:
+		model = Receta
+
+class ComentarioForm(ModelForm):
+	class Meta:
+		model = Comentario

@@ -14,5 +14,11 @@ urlpatterns = patterns('',
 	url(r'^usuarios/$', 'principal.views.usuarios'),
 	url(r'^recetas/$', 'principal.views.recetas'),
 	url(r'^receta/(?P<id_receta>\d+)$','principal.views.detalle_receta'),
-	url(r'^contacto/$','principal.views.contacto')
+	url(r'^contacto/$','principal.views.contacto'),
+	url(r'^receta/nuevo/$','principal.views.nueva_receta'),
+	url(r'^comentario/nuevo/$','principal.views.nuevo_comentario'),
+	url(r'^usuario/nuevo/$', 'principal.views.nuevo_usuario'),
+	url(r'^usuario/ingresar/$', 'principal.views.ingresar'),
+	url(r'^privado/$', 'principal.views.privado'),
+	url(r'^cerrar/$', 'principal.views.cerrar'),
 )

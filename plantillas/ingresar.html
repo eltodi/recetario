@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block titulo %}Acceder al sistema{% endblock %}
+
+{% block contenido %}
+	<form id="formulario" method="post" action="">{% csrf_token %}
+		<table>{{ formulario }}</table>
+		<p><input type="submit" value="ENTRAR" /></p>
+	</form>
+{{ datos.password }}
+{% endblock %}

@@ -1,0 +1,34 @@
+body, header, footer, div, h1, h2, ul, li, a
+{
+	margin:0; padding: 0;
+}
+
+header
+{
+	background-color: #008500;
+	color: #FFFFFF;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	margin: 10px;
+}
+
+img{
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,1);
+	padding:7px;
+	width:150px;
+}
+
+.activo{
+	font-weight: bold;
+}
+
+.impar{
+	background-color: #DDD;
+}
+
+.par{
+	background-color: #AAA;
+}

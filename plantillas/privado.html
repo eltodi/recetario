@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block titulo %}Bienvendo {{usuario.username}}{% endblock %}
+{% block contenido %}
+	<p>
+		Hola {{ usuario.username|upper }},</p>
+	<p>No te vemos por aquí desde {{ usuario.last_login }}</p>
+	<p>Eres usuario registrado desde {{usuario.date_joined}}</p>
+
+{% endblock %}
