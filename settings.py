@@ -148,3 +148,10 @@ LOGGING = {
         },
     }
 }
+
+#Configuracion para enviar mail desde gmail
+EMAIL_USE_TLS = False
+EMAIL_HOST = ""
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
+EMAIL_PORT = 25
